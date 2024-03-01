@@ -13,6 +13,11 @@
             </thead>
             <tbody>
                 <tr>
+                    <td> {{ nombre2 }}</td>
+                    <td>  capitalizado (pipe personalizado)</td>
+                    <td> {{ nombre2 | capitalizado:true }} </td>
+                </tr>
+                <tr>
                     <td> {{ nombre }}</td>
                     <td>  uppercase </td>
                     <td> {{ nombre | uppercase }} </td>
@@ -97,6 +102,16 @@
                     <td>  date:'MMMM-dd' </td>
                     <td> {{ fecha | date:'MMMM-dd' }} </td>
                 </tr>
+                <tr>
+                    <td> {{ fecha }}</td>
+                    <td>  fecha | date:'MMMM-dd':'':'en'  </td>
+                    <td> {{ fecha | date:'MMMM-dd':'':'en' }} </td>
+                </tr>
+                <tr>
+                    <td> {{ fecha }}</td>
+                    <td>  fecha | date:'MMMM-dd':'':'fr'  </td>
+                    <td> {{ fecha | date:'MMMM-dd':'':'fr' }} </td>
+                </tr>
             </tbody>
         </table>
         <h4>Slice</h4>
@@ -114,6 +129,18 @@
             </div>
         </div>
 
-        
+        <h3 class="mt-4">Domseguro</h3>
+        <hr>
+            <div class="row mb-5">
+                <div class="col">
+                    <iframe width="560" 
+                        height="315" 
+                        [src]="videoUrl | domseguro"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>      
     </div>
 </div>
