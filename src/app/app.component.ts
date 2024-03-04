@@ -14,6 +14,7 @@ export class AppComponent {
   porcentaje: number = 0.234; 
   salario: number = 1234.5; 
   fecha: Date = new Date(); 
+  activar: boolean = true; 
 
   videoUrl: string = 'https://www.youtube.com/embed/HFUWZ7Au640?si=RN6F4KYbw1wPQ3Ys';
 
@@ -34,6 +35,14 @@ export class AppComponent {
       resolve("llegó la data");
     }, 4500);
   });
+
+
+  cambiarResult(){
+    if(this.activar==true){
+      this.activar = false;
+    } else 
+      this.activar = true; 
+  }
 
 
 
